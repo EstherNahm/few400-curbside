@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PollingEffects } from './effects/polling.effects';
 import { SyncComponent } from './components/sync/sync.component';
 import { SyncEffects } from './effects/sync.effects';
+import { SocketEffects } from './effects/socket.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { SyncEffects } from './effects/sync.effects';
     AppRoutingModule,
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
-    EffectsModule.forRoot([PollingEffects, SyncEffects]),
+    EffectsModule.forRoot([PollingEffects, SyncEffects, SocketEffects]),
     ReactiveFormsModule,
     HttpClientModule,
   ],

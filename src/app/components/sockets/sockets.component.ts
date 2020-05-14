@@ -15,6 +15,8 @@ import { SocketEntity } from 'src/app/reducers/socket.reducer';
   templateUrl: './sockets.component.html',
   styleUrls: ['./sockets.component.scss'],
 })
+
+// "@aspnet/signalr": "^1.1.4", in the package.json is what allows for sockets
 export class SocketsComponent implements OnInit {
   theForm: FormGroup;
   orders$: Observable<SocketEntity[]>;
